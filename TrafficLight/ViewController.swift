@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startBButtonPressed() {
-            startButton.setTitle("NEXT", for: .normal)
+            startButton.setTitle("Bad", for: .normal)
     
         
         switch currentLight {
