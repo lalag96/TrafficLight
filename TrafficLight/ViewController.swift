@@ -8,19 +8,16 @@
 import UIKit
 
 enum CurrentLight {
-case red, yellow, green
+    case red, yellow, green
 }
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var redView: UIView!
     @IBOutlet weak var yellowView: UIView!
     @IBOutlet weak var greenView: UIView!
     
     @IBOutlet var startButton: UIButton!
-    
-
     
     private var currentLight = CurrentLight.red
     private let lightOn:CGFloat = 1
@@ -40,10 +37,9 @@ class ViewController: UIViewController {
         greenView.layer.cornerRadius = redView.frame.width / 2
         
     }
-
-    @IBAction func startBButtonPressed() {
-            startButton.setTitle("NEXT", for: .normal)
     
+    @IBAction func startBButtonPressed() {
+        startButton.setTitle("NEXT", for: .normal)
         
         switch currentLight {
         case .red:
@@ -60,7 +56,5 @@ class ViewController: UIViewController {
             currentLight = .red
         }
     }
-    
-    
 }
 
